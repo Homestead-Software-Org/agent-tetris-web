@@ -1,3 +1,100 @@
-/*
- * TODO: Add styles for Tetris web app.
- */
+:root {
+  --bg: #0b0f14;
+  --panel: #111826;
+  --text: #e7eef8;
+  --muted: #93a4bf;
+  --border: #233146;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica,
+    Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px;
+  display: grid;
+  gap: 16px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.title {
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: 0.5px;
+}
+
+.hud {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.hud__item {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.hud__label {
+  color: var(--muted);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.hud__value {
+  font-size: 24px;
+  font-variant-numeric: tabular-nums;
+  margin-top: 6px;
+}
+
+.game {
+  display: flex;
+  justify-content: center;
+}
+
+#game {
+  width: 240px;
+  height: 480px;
+  background: #06080d;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.help {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.help__title {
+  color: var(--muted);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+
+.help__list {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--text);
+  line-height: 1.6;
+}

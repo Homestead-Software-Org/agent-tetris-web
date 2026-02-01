@@ -1,2 +1,40 @@
-## Tetris
-and needs implementation.
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tetris</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <h1 class="title">Tetris</h1>
+      </header>
+
+      <section class="hud" aria-label="Game status">
+        <div class="hud__item">
+          <div class="hud__label">Score</div>
+          <div id="score" class="hud__value" aria-live="polite">0</div>
+        </div>
+      </section>
+
+      <section class="game" aria-label="Tetris playfield">
+        <canvas id="game" width="240" height="480" aria-label="Tetris board"></canvas>
+      </section>
+
+      <footer class="help">
+        <div class="help__title">Controls</div>
+        <ul class="help__list">
+          <li>← / →: move</li>
+          <li>↑: rotate</li>
+          <li>↓: soft drop</li>
+          <li>Space: hard drop</li>
+          <li>Enter: restart</li>
+        </ul>
+      </footer>
+    </main>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
